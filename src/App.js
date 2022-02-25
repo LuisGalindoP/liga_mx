@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+// import dependencies
+import React, {useState} from 'react';
+
+//import related components
+import BannerTeams from "./components/bannerTeams";
+import LogoBanner from "./components/logoBAnner";
+import MenuBar from "./components/menuBar";
+import GameCards from "./components/gameCards";
+import MiddleAddBanner from "./components/middleAddBanner";
+import NewsCarrousel from "./components/newsCarrousel"
+
+//import data for teams
+import Teams from "./data/teams";
+
+
 
 function App() {
+    const [teams, setTeams] = useState(Teams);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <BannerTeams
+        teams={teams}
+      />
+      <LogoBanner/>
+      <MenuBar/>
+      <GameCards/>
+      <MiddleAddBanner/>
+      <NewsCarrousel/>
+      <MiddleAddBanner/>
     </div>
   );
 }
