@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 
 //import related components
 import BannerTeams from "./components/bannerTeams";
-import LogoBanner from "./components/logoBAnner";
+import LogoBanner from "./components/logoBanner";
 import MenuBar from "./components/menuBar";
 import GameCards from "./components/gameCards";
 import MiddleAddBanner from "./components/middleAddBanner";

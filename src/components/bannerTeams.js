@@ -1,21 +1,24 @@
 import React from 'react';
+import Teams from '../data/teams'
 
-const BannerTeams = (props) => {
-    const {teams} = props;
-    const uno = 'http://t1.gstatic.com/images?q=tbn:ANd9GcQE2-vwGOI9-lemKf1CBNIs6DhzCEnBIt-mEQr5Vg-4Hmy00ZR2';
+const BannerTeams = () => {
+
+    
     return (
-        <div className={'bg-red-100 flex flex-auto justify-center'}>
-
-            {/*<img src={teams[1].teamBanner} alt=""/>*/}
-            {teams.map((team, index) =>{
-                return (
-                    <div>
-                        <img src={require('../images/teams/america.png')} alt=""/>
-                        <img src={require(`${team.teamBanner}`)} alt=""/>
-
-                    </div>
-                )
-            })}
+        <div className={'bg-gray-300 h-16'}>
+            <div className={'flex justify-center gap-6 pt-3'}>
+                {Teams.map((item, index)=>{
+                    return (
+                        <div key={index}>
+                            <img
+                                src={require(`../images/teams/${item.teamBanner}`)}
+                                alt={item.name}
+                                width={'36px'}
+                            />
+                        </div>
+                    )
+                })}
+            </div>
         </div>
     )
 };
